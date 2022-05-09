@@ -7,7 +7,7 @@
  * @example "abcdef" -> "ABCdef"
 */
 function problem(str) {
-    return null;
+    return str.slice(0, str.length / 2).toUpperCase() + str.slice(str.length / 2, str.length).toLowerCase();
 }
 
 const tests = [

@@ -8,7 +8,17 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    str = str.trim().toLowerCase();
+    if (str.length === 1){
+        return true;
+    }
+    else if (str.length === 2){
+        return str.charAt(0) === str.charAt(1);
+    }
+    if (str.charAt(0) !== str.charAt(str.length - 1)){
+        return false;
+    }
+    return problem(str.slice(1, str.length - 1));
 }
 
 const tests = [

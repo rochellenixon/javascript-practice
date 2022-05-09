@@ -6,8 +6,20 @@
  * 
  * @example [3,2,3] -> 3
 */
+
 function problem(numbers) {
-    return null;
+    const n = (numbers.length / 2) - 1;
+    for (let i = 0; i < numbers.length; i++) {
+        count = 0;
+        for (let j = 0; j < numbers.length; j++){
+            if (numbers[i] == numbers[j]){
+                count += 1;
+            }
+        }
+        if (count > n){
+            return numbers[i];
+        }
+    }
 }
 
 const tests = [
